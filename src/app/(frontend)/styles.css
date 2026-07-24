@@ -162,3 +162,66 @@ svg {
     }
   }
 }
+
+/* Checkout Responsive Layout */
+.checkout-main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  color: white; /* Asegurar contraste */
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  order: 1;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.checkout-summary {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #ffc107;
+  color: black;
+  order: 2;
+  height: fit-content;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .checkout-main {
+    padding: 1rem 0.75rem;
+  }
+
+  .checkout-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .checkout-form {
+    order: 2; /* Formulario abajo */
+  }
+
+  .checkout-summary {
+    order: 1; /* Resumen arriba */
+    padding: 1rem; /* Padding más chico en móvil para que entre bien */
+  }
+
+  .form-row {
+    flex-direction: column; /* Inputs apilados verticalmente en celulares */
+    gap: 1rem;
+  }
+}

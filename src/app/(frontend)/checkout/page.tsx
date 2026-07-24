@@ -98,12 +98,12 @@ export default function CheckoutPage() {
 
 
     return (
-        <main style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', fontFamily: 'sans-serif' }}>
+        <main className="checkout-main">
             <h1>Finalizar Pedido</h1>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginTop: '2rem' }}>
+            <div className="checkout-container">
                 {/* Formulario de Envío */}
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <form onSubmit={handleSubmit} className="checkout-form">
                     <h3>Datos de Entrega</h3>
 
                     <input
@@ -152,7 +152,7 @@ export default function CheckoutPage() {
                         style={{ padding: '0.75rem', borderRadius: '4px', border: '1px solid #ccc' }}
                     />
 
-                    <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    <div className="form-row">
                         <input
                             type="text"
                             name="addressNumber"
@@ -191,7 +191,7 @@ export default function CheckoutPage() {
                 </form>
 
                 {/* Resumen del Carrito */}
-                <div style={{ padding: '1.5rem', borderRadius: '8px', backgroundColor: '#ffc107', color: 'black' }}>
+                <div className="checkout-summary">
                     <h3 style={{ marginTop: 0, borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: '0.5rem' }}>Resumen del Carrito</h3>
                     {items.map((item) => (
                         <div key={item.product.id} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem', fontWeight: '500' }}>

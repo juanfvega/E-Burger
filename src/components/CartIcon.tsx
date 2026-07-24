@@ -139,6 +139,7 @@ export function CartIcon() {
 
                                     <Link
                                         href="/checkout"
+                                        onClick={() => setIsOpen(false)}
                                         style={{
                                             flex: 2,
                                             padding: '0.5rem',
