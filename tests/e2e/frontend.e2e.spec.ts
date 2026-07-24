@@ -8,14 +8,14 @@ test.describe('Frontend', () => {
     page = await context.newPage()
   })
 
-  test('can go on homepage', async ({ page }) => {
+  test('can go on homepage and redirect to categories', async ({ page }) => {
     await page.goto('http://localhost:3000')
 
-    await expect(page).toHaveTitle(/Payload Blank Template/)
+    await expect(page).toHaveURL(/.*\/categories/)
 
     const heading = page.locator('h1').first()
 
-    await expect(heading).toHaveText('Welcome to your new project.')
+    await expect(heading).toHaveText('¿Qué te gustaría comer hoy?')
   })
 
   test('can navigate to categories page and select a category', async ({ page }) => {
