@@ -85,6 +85,24 @@ export function QuantitySelector({ product, price }: { product: Product, price: 
             >
                 Añadir al Carrito
             </button>
+            {/* Botón para ir al carrito */}
+            {items.length > 0 && (
+                <button
+                    onClick={() => window.location.href = '/checkout'}
+                    style={{
+                        padding: '0.75rem 1.5rem',
+                        backgroundColor: '#e53e3e',
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '6px',
+                        fontSize: '1rem',
+                        fontWeight: 'bold',
+                        cursor: 'pointer',
+                    }}
+                >
+                    Ir al Carrito
+                </button>
+            )}
 
         </div>
     )
